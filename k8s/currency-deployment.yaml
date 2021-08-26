@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currencyconverter-aws
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: currencyconverter-aws
+  replicas: 1
+  template:
+    metadata:
+      name: currencyconverter-aws
+      labels:
+        app: currencyconverter-aws
+    spec:
+      containers:
+        - name: currencyconverter-aws
+          image: pavelskodilla/currencyconverter-aws:1.0

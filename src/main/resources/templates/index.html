@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency table</title>
+</head>
+<body>
+<div>Convert PLN to Euro</div>
+<tr th:if="${value!=0.0}">
+    <div th:text="${value}"></div>
+</tr>
+
+<form method="post" action="/currency" class="form-actions">
+    <input type="text" name="value"/>
+    <input type="submit" value="calculate Euro" placeholder="Insert PLN Value"/>
+</form>
+</body>
+</html>
